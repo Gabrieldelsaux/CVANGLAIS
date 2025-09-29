@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    border: inset 8px;
+    background-color: aqua;
+    width: 30vh;
+    height: 100vh;
+}
+
+.nom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.contact {
+    padding-left: 70px;
+    font-weight: 20px;
+}
+
+.contact1 {
+    padding-top: 10px;
+    padding-left: 15px;
+}
