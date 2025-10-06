@@ -1,32 +1,168 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    border: inset 8px;
-    background-color: aqua;
-    width: 30vh;
-    height: 100vh;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 20px;
+    line-height: 1.6;
 }
 
-.nom {
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.header .title {
+    font-size: 1.3em;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.contact-info {
     display: flex;
     justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    font-size: 0.95em;
+}
+
+.contact-info span {
+    display: flex;
     align-items: center;
-    flex-direction: column;
-    padding-top: 10px;
-    font-size: 20px;
+    gap: 5px;
 }
 
-.contact {
-    padding-left: 70px;
-    font-weight: 20px;
+.content {
+    padding: 40px;
 }
 
-.contact1 {
-    padding-top: 10px;
-    padding-left: 15px;
+.section {
+    margin-bottom: 35px;
+}
+
+.section h2 {
+    color: #667eea;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+.profile-text {
+    color: #555;
+    text-align: justify;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 25px;
+}
+
+.experience-item h3, .education-item h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.company, .institution {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.experience-item ul, .responsibilities {
+    margin-left: 20px;
+    color: #555;
+}
+
+.experience-item li {
+    margin-bottom: 5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-category h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    padding: 6px 0;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-category li:before {
+    content: "▪";
+    color: #667eea;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+/* Styles pour l'impression */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+    .header {
+        padding: 30px 20px;
+    }
+    .header h1 {
+        font-size: 2em;
+    }
+    .content {
+        padding: 25px;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
